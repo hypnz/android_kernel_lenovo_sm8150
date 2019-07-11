@@ -42,12 +42,16 @@
  */
 static struct kmem_cache *memobjs_cache;
 static struct kmem_cache *sparseobjs_cache;
+static struct kmem_cache *drawobj_sparse_cache;
+static struct kmem_cache *drawobj_sync_cache;
+static struct kmem_cache *drawobj_cmd_cache;
 
 static struct kmem_cache *drawobj_sparse_cache;
 static struct kmem_cache *drawobj_sync_cache;
 static struct kmem_cache *drawobj_cmd_cache;
 
 #ifdef CONFIG_FENCE_DEBUG
+
 static void free_fence_names(struct kgsl_drawobj_sync *syncobj)
 {
 	unsigned int i;
